@@ -1,8 +1,25 @@
+DOALL=""
+DOHOME="false"
+DOROOT="false"
+KEYWORD=""
 
-for
+for arg in "$@"
+do
+	if [[ "$arg" == "-a" ]]; then
+		DOALL="-a"
+	elif [[ "$arg" == "-r" ]]; then
+		DOROOT="true"
+	elif [[ "$arg" == "-h" ]]; then
+		DOHOME="true"
+	else
+		KEYWORD="$arg"
+	fi
+done
 
-if [[ "$1" == "-a" ]]; then
-	ls -a -r  | grep "$2"
+if [[ "$DOHOME" == "true" ]]; then
+	ls "$DOALL" -r ~/ | grep "$KEYWORD"
+elif [[ "$DOROOT" == "true" ]]; then
+	ls "$DOALL" -r / | grep "$KEYWORD"
 else
-	ls -r | grep "$1"
+	echo 'ls "$DOALL" -r $(pwd) | grep "$KEYWORD"'
 fi
