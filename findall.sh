@@ -17,9 +17,9 @@ do
 done
 
 if [[ "$DOHOME" == "true" ]]; then
-	ls "$DOALL" -r ~/ | grep "$KEYWORD"
+	ls "$DOALL" -R ~/ | grep "$KEYWORD"
 elif [[ "$DOROOT" == "true" ]]; then
-	ls "$DOALL" -r / | grep "$KEYWORD"
+	ls "$DOALL" -R / | grep "$KEYWORD"
 else
-	ls "$DOALL" -r $(pwd) | grep "$KEYWORD"
+	ls "$DOALL" -R $(pwd) | grep "$KEYWORD"
 fi
