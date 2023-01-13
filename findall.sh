@@ -1,4 +1,4 @@
-DOALL=""
+DOALL="-A"
 DOHOME="false"
 DOROOT="false"
 KEYWORD=""
@@ -21,5 +21,5 @@ if [[ "$DOHOME" == "true" ]]; then
 elif [[ "$DOROOT" == "true" ]]; then
 	ls "$DOALL" -r / | grep "$KEYWORD"
 else
-	echo 'ls "$DOALL" -r $(pwd) | grep "$KEYWORD"'
+	ls "$DOALL" -r $(pwd) | grep "$KEYWORD"
 fi
