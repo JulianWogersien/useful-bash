@@ -21,11 +21,11 @@ file1="$1"
 file2="$2"
 
 while read -r line; do
-		linesf1+=("$line");
+	linesf1+=("$line");
 done <$file1
 
 while read -r line; do
-		linesf2+=("$line")
+	linesf2+=("$line")
 done <$file2
 
 for (( i=0; i<${#linesf2[@]}; i++ )); do
