@@ -25,23 +25,24 @@ echo " " >> "$2"
 
 while read -r line; do
     linesf1+=("$line");
-done <$file1
+done <"$file1"
 
 while read -r line; do
     linesf2+=("$line")
-done <$file2
+done <"$file2"
 
-array_contains linesf1 "200" && echo yes || echo no
-array_contains linesf1 "19" && echo yes || echo no
-array_contains linesf2 "56" && echo yes || echo no
-array_contains linesf2 "962" && echo yes || echo no
+# uncomment to test array_contains function
+#array_contains linesf1 "200" && echo yes || echo no
+#array_contains linesf1 "19" && echo yes || echo no
+#array_contains linesf2 "56" && echo yes || echo no
+#array_contains linesf2 "962" && echo yes || echo no
 
 for (( i=0; i<${#linesf2[@]}; i++ )); do
-    array_contains linesf1 "${linesf2[$i]}" && continue || lines_out+=("${linesf2[$i]}")
+    array_contains lines_out "${linesf2[$i]}" && continue || lines_out+=("${linesf2[$i]}")
 done
 
 for (( i=0; i<${#linesf1[@]}; i++ )); do
-    array_contains linesf2 "${linesf1[$i]}" && continue || lines_out+=("${linesf1[$i]}")
+    array_contains lines_out "${linesf1[$i]}" && continue || lines_out+=("${linesf1[$i]}")
 done
 
-echo ${lines_out[*]} >> "output.txt"
+echo "${lines_out[*]}" >> "output.txt"
