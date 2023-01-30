@@ -38,11 +38,11 @@ done <"$file2"
 #array_contains linesf2 "962" && echo yes || echo no
 
 for (( i=0; i<${#linesf2[@]}; i++ )); do
-    array_contains lines_out "${linesf2[$i]}" && continue || lines_out+=("${linesf2[$i]}")
+    array_contains lines_out "${linesf2[$i]}" && continue || lines_out+=("${linesf2[$i]}" + "\n")
 done
 
 for (( i=0; i<${#linesf1[@]}; i++ )); do
-    array_contains lines_out "${linesf1[$i]}" && continue || lines_out+=("${linesf1[$i]}")
+    array_contains lines_out "${linesf1[$i]}" && continue || lines_out+=("${linesf1[$i]}" + "\n")
 done
 
 echo -e "${lines_out[*]}" >> "output.txt"
