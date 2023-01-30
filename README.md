@@ -32,3 +32,6 @@ the file generated would contain
 ## install-basic-vim-config.sh
 this script installs my [basic vim config](https://github.com/coolian1337/basic-vim-config)
 into your home directory without making your home directory a github repo
+
+## pacman-get-package-list-noversion.sh  
+This script gets all packges installed with pacman and puts them into packages.txt and removes their versions
