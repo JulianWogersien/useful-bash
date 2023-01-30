@@ -45,4 +45,4 @@ for (( i=0; i<${#linesf1[@]}; i++ )); do
     array_contains lines_out "${linesf1[$i]}" && continue || lines_out+=("${linesf1[$i]}")
 done
 
-echo "${lines_out[*]}" >> "output.txt"
+echo -e "${lines_out[*]}" >> "output.txt"
