@@ -46,6 +46,5 @@ for (( i=0; i<${#linesf1[@]}; i++ )); do
 done
 
 echo -e "${lines_out[*]}" >> "output.txt"
-cat output.txt | tr -d" " >> "output"
-rm -f "output.txt"
+tr -d " " <"output.txt"
 
