@@ -13,21 +13,21 @@ lines of both files but no double lines for example if you have a file containin
 2 
 3 
 4 
-4 
+4  
 and a file containing  
 1 
 3 
 4 
 5 
 4 
-6 
+6  
 the file generated would contain  
 1 
 2 
 3 
 4 
 5 
-6 
+6  
 this script also strips empty lines (eg. lines containing only newlines or spaces)  
 this can be disabled by passing -t after the files it will include lines containing whitespaces  
 
