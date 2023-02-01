@@ -33,7 +33,8 @@ this can be disabled by passing -t after the files it will include lines contain
 
 ## install-basic-vim-config.sh
 this script installs my [basic vim config](https://github.com/coolian1337/basic-vim-config)
-into your home directory without making your home directory a github repo
+into your home directory without making your home directory a github repo  
+pass -r to the script to have it install it into /root too so you will have this config even when you need to edit something that requires root  
 
 ## pacman-get-package-list-noversion.sh  
 This script gets all packges installed with pacman and puts them into packages.txt and removes their versions
