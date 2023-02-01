@@ -40,10 +40,10 @@ while read -r line; do
 done <"$file2"
 
 # uncomment to test array_contains function
-#array_contains linesf1 "200" && echo yes || echo no
-#array_contains linesf1 "19" && echo yes || echo no
-#array_contains linesf2 "56" && echo yes || echo no
-#array_contains linesf2 "962" && echo yes || echo no
+#array_contains (200,1,2,6,2323,5,19) "200" && echo yes || echo no
+#array_contains (200,1,2,6,2323,5,19) "19" && echo yes || echo no
+#array_contains (200,1,2,6,2323,5,19) "56" && echo yes || echo no
+#array_contains (200,1,2,6,2323,5,19) "962" && echo yes || echo no
 
 for (( i=0; i<${#linesf2[@]}; i++ )); do
     array_contains lines_out "${linesf2[$i]}" && continue || lines_out+=("${linesf2[$i]}" "\n")
