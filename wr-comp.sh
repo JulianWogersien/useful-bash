@@ -13,6 +13,8 @@ array_contains() {
     return $in
 }
 
+do_trim="true"
+
 linesf1=()
 linesf2=()
 lines_out=()
@@ -22,6 +24,12 @@ file2="$2"
 
 echo " " >> "$1"
 echo " " >> "$2"
+
+for arg in "$@"; do
+    if [[ "$arg" == "-t" ]]; then
+        do_trim="false"
+    fi
+done
 
 while read -r line; do
     linesf1+=("$line");
@@ -46,6 +54,9 @@ for (( i=0; i<${#linesf1[@]}; i++ )); do
 done
 
 echo -e "${lines_out[*]}" >> "output.txt"
-cat output.txt | tr -d " " >> "out"
-mv -f out output.txt
-
+if [[ "$do_trim" == "true" ]]; then
+    tr -d " " < output.txt | tee -a tm.tm
+    grep -v '^[[:blank:]]*$' tm.tm >tm.tm.tmp && mv tm.tm{.tmp,}
+    mv -f tm.tm output.txt
+    #rm -f out
+fi
