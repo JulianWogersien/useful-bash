@@ -58,5 +58,4 @@ if [[ "$do_trim" == "true" ]]; then
     tr -d " " < output.txt | tee -a tm.tm
     grep -v '^[[:blank:]]*$' tm.tm >tm.tm.tmp && mv tm.tm{.tmp,}
     mv -f tm.tm output.txt
-    #rm -f out
 fi
