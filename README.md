@@ -12,9 +12,9 @@ this has to be run in the root directory of your project
 
 ## wr-comp.sh
 > Posix Compliant: No  
-> Will it be: No
-> Reason: Arrays are required and Posix doesnt have them
-> Maybe: It might be possible to replace them with delimited strings but im not doing that
+> Will it be: No  
+> Reason: Arrays are required and Posix doesnt have them  
+> Maybe: It might be possible to replace them with delimited strings but im not doing that  
 
 wr-comp.sh compares to given files passed as arguments and generates a new file containing
 lines of both files but no double lines for example if you have a file containing  
