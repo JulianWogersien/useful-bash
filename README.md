@@ -50,4 +50,10 @@ pass -r to the script to have it install it into /root too so you will have this
 ## pacman-get-package-list-noversion.sh  
 > Posix Compliant: Yes  
 
+This script gets all packges installed with pacman and puts them into packages.txt and removes their versions
+
+## count-lines-sh
+> Posix Compliant: Yes  
+
+this counts lines of all files in the current directory recursively except if any file is inside a .git folder or its a README or LICENSE file  
 This script gets all packages installed with pacman and puts them into packages.txt and removes their versions
