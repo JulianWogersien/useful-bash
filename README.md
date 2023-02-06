@@ -6,9 +6,13 @@ all entries here have listed wether or not they are posix compliant
 ## vimspector.sh 
 > Posix Compliant: Yes  
 
-this script generates a vimspector file for a rust project
-vimspector is a plugin for vim & neovim for debugging
-this has to be run in the root directory of your project
+this script generates a vimspector file for a project.
+vimspector is a plugin for vim & neovim for debugging.
+this has to be run in the root directory of your project.
+you need to specify a language, since at the moment i mostly use rust the build path  
+for everything but rust is ${workspaceRoot}/src/$name
+you also need to specify a name as the second argument.
+this supports all languages that vimspector support except legacy ones
 
 ## wr-comp.sh
 > Posix Compliant: No  
