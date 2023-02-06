@@ -60,4 +60,3 @@ This script gets all packges installed with pacman and puts them into packages.t
 > Posix Compliant: Yes  
 
 this counts lines of all files in the current directory recursively except if any file is inside a .git folder or its a README or LICENSE file  
-This script gets all packages installed with pacman and puts them into packages.txt and removes their versions
