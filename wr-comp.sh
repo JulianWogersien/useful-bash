@@ -40,6 +40,7 @@ while read -r line; do
 done <"$file2"
 
 # uncomment to test array_contains function
+# output should be yes yes no no
 #array_contains (200,1,2,6,2323,5,19) "200" && echo yes || echo no
 #array_contains (200,1,2,6,2323,5,19) "19" && echo yes || echo no
 #array_contains (200,1,2,6,2323,5,19) "56" && echo yes || echo no
