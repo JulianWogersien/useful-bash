@@ -60,3 +60,9 @@ This script gets all packges installed with pacman and puts them into packages.t
 > Posix Compliant: Yes  
 
 this counts lines of all files in the current directory recursively except if any file is inside a .git folder or its a README or LICENSE file  
+
+## anti-afk.sh
+> Posix Compliant: Yes  
+
+This script moves your mouse every 1 second (with relative movements)
+
