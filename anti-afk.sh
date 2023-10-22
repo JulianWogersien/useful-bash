@@ -1,3 +1,4 @@
+#!/bin/sh
 
 while [ 1 ]; do
     sudo ydotool mousemove -x -100 -y 100
