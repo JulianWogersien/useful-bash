@@ -3,6 +3,14 @@ useful bash scripts i wrote
 i will try to make them posix compliant especally the simpler ones, 
 all entries here have listed wether or not they are posix compliant
 
+## block-torrent.sh
+> Posix Compliant: Yes
+
+This script uses iptables to block torrent connection.
+However it is rather loose and doesnt for example block encrypted ssl traffic
+
+use -r argument to reset the iptables configuration
+
 ## vimspector.sh 
 > Posix Compliant: Yes  
 
