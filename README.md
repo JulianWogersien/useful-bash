@@ -3,6 +3,11 @@ useful bash scripts i wrote
 i will try to make them posix compliant especally the simpler ones, 
 all entries here have listed wether or not they are posix compliant
 
+## checkout-pr.sh
+> Posix Compliant: Yes
+This script creates a new branch from a given pull request  
+First argument is the pull request number and the second is optionally a name for the new branch  
+
 ## block-torrent.sh
 > Posix Compliant: Yes
 
